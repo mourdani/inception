@@ -13,4 +13,7 @@ cwp:
 cdb:
 	docker stop mariadb; docker rm mariadb; docker rmi -f srcs_mariadb
 
+clean:
+	make cwp cnginx cdb; docker network rm srcs_inception; docker volume rm srcs_wp_data;docker volume rm srcs_wp_db
+
 re: clean all
