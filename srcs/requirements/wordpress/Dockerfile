@@ -6,7 +6,7 @@ RUN apt install wget -y
 RUN mkdir -p /var/www/html/
 RUN wget -qO- http://wordpress.org/latest.tar.gz | tar xvz -C /var/www/html/
 RUN chown -R www-data:www-data /var/www/html
-RUN apt install php-fpm php-mysql -y
+RUN apt install php-fpm php-mysqli php-mysql -y
 RUN mkdir -p /var/run/php
 
 

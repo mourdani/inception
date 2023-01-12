@@ -9,7 +9,8 @@ services:
     ports:
       - "443:443"
     networks:
-      - inception
+      inception:
+         ipv4_address: 172.18.0.12
     volumes:
       - wp_data:/var/www/
     networks:
@@ -24,7 +25,8 @@ services:
     volumes:
       - wp_data:/var/www/
     networks:
-      - inception
+      inception:
+         ipv4_address: 172.18.0.3
     tty: true
     restart: always
 
@@ -38,7 +40,8 @@ services:
     env_file:
       requirements/mariadb/.env.mariadb
     networks:
-      - inception
+      inception:
+         ipv4_address: 172.18.0.5
     restart: always
 
 volumes:
@@ -55,3 +58,6 @@ volumes:
 
 networks:
   inception:
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
