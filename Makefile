@@ -5,10 +5,12 @@ NAME: $(DOCKER_COMPOSE)
 
 all:	$(NAME)
 
-cngnix:
-	docker stop nginx; docker rm nginx; docker rmi -f srcs-nginx;
+cnginx:
+	docker stop nginx; docker rm nginx; docker rmi -f srcs_nginx;
 
 cwp:
-	docker stop wordpress; docker rm wordpress; docker rmi srcs-wordpress
+	docker stop wordpress; docker rm wordpress; docker rmi -f srcs_wordpress
+cdb:
+	docker stop mariadb; docker rm mariadb; docker rmi -f srcs_mariadb
 
 re: clean all

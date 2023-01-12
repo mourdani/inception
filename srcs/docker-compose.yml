@@ -8,10 +8,14 @@ services:
       dockerfile: requirements/nginx/Dockerfile
     ports:
       - "443:443"
-    environment:
-      - SERVER_NAME
-      - SSL_CERT_PATH
-      - SSL_KEY
+    networks:
+      - inception
+    volumes:
+      - wp_data:/var/www/
+    env_file:
+          .env.mysql
+    networks:
+      - inception
     restart: always
 
   wordpress:
@@ -21,7 +25,21 @@ services:
       dockerfile: requirements/wordpress/Dockerfile
     volumes:
       - wp_data:/var/www/
-    tty: true
+    networks:
+      - inception
+    restart: always
+
+  mariadb:
+    container_name: mariadb
+    build:
+      context: .
+      dockerfile: requirements/mariadb/Dockerfile
+    volumes:
+      - wp_db:/var/lib/mysql/
+    env_file:
+      .env.mysql
+    networks:
+      - inception
     restart: always
 
 volumes:
@@ -29,4 +47,12 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: ${PWD}/srcs/test
+      device: home/mourdani/data/wordpress/
+  wp_db:
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/mourdani/data/database/
+
+networks:
+  inception:
