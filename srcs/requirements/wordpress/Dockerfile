@@ -10,6 +10,9 @@ RUN apt install php-fpm -y
 RUN mkdir -p /var/run/php
 
 
+
+COPY requirements/wordpress/conf/www.conf /etc/php/7.3/fpm/pool.d/www.conf
+
 EXPOSE 9000 
 EXPOSE 3306 
 
