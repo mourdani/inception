@@ -27,7 +27,6 @@ services:
     networks:
       inception:
          ipv4_address: 172.18.0.3
-    tty: true
     restart: always
 
   mariadb:
