@@ -9,13 +9,10 @@ RUN chown -R www-data:www-data /var/www/html
 RUN apt install php-fpm php-mysqli php-mysql -y
 RUN mkdir -p /var/run/php
 
-
-
 COPY requirements/wordpress/conf/www.conf /etc/php/7.3/fpm/pool.d/www.conf
 COPY requirements/wordpress/conf/php.ini /etc/php/7.3/fpm/php.ini
 
 EXPOSE 9000 
 EXPOSE 3306 
-
 
 CMD ["/usr/sbin/php-fpm7.3", "--nodaemonize"]

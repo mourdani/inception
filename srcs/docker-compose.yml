@@ -24,6 +24,8 @@ services:
       dockerfile: requirements/wordpress/Dockerfile
     volumes:
       - wp_data:/var/www/
+    env_file:
+      requirements/wordpress/.env.wordpress
     networks:
       inception:
          ipv4_address: 172.18.0.3
