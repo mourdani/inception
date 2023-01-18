@@ -40,6 +40,7 @@ services:
       - wp_db:/var/lib/mysql/
     env_file:
       requirements/mariadb/.env.mariadb
+    tty: true
     networks:
       inception:
          ipv4_address: 172.18.0.5
