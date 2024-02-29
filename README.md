@@ -176,5 +176,5 @@ cd inception
 Use the following command to run inception:
 
 ```sh
-> docker compose up
+docker compose up
 ```
