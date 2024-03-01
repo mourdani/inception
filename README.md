@@ -1,7 +1,4 @@
 <p align="center">
-  <img src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/96/external-markdown-a-lightweight-markup-language-with-plain-text-formatting-syntax-logo-filled-tal-revivo.png" width="100" />
-</p>
-<p align="center">
     <h1 align="center">INCEPTION</h1>
 </p>
 <p align="center">
