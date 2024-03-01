@@ -100,8 +100,8 @@ The inception project orchestrates Docker containers for Nginx, MariaDB, and Wor
 
 | File                                                                                                           | Summary                                                                                                                                                                                                                                                   |
 | ---                                                                                                            | ---                                                                                                                                                                                                                                                       |
-| [Dockerfile](https://github.com/mourdani/inception/blob/master/srcs/requirements/wordpress/Dockerfile)         | Role:** WordPress Dockerfile for Inception Repository **Features:** Installs WordPress on Debian, configures PHP-FPM, and exposes ports for PHP and MySQL. **Reference:** `srcs/requirements/wordpress/Dockerfile` in `inception` Repository.             |
-| [.env.wordpress](https://github.com/mourdani/inception/blob/master/srcs/requirements/wordpress/.env.wordpress) | Code snippet in `inception/srcs/requirements/wordpress/.env.wordpress` sets WordPress environment variables for database connections and user credentials. It establishes key configurations for the WordPress instance in the repository's architecture. |
+| [Dockerfile](https://github.com/mourdani/inception/blob/master/srcs/requirements/wordpress/Dockerfile)         |  WordPress Dockerfile for Inception Repository **Features:** Installs WordPress on Debian, configures PHP-FPM, and exposes ports for PHP and MySQL. **Reference:** `srcs/requirements/wordpress/Dockerfile` in `inception` Repository.             |
+| [.env.wordpress](https://github.com/mourdani/inception/blob/master/srcs/requirements/wordpress/.env.wordpress) | inception/srcs/requirements/wordpress/.env.wordpress` sets WordPress environment variables for database connections and user credentials. It establishes key configurations for the WordPress instance in the repository's architecture. |
 
 </details>
 
@@ -109,7 +109,7 @@ The inception project orchestrates Docker containers for Nginx, MariaDB, and Wor
 
 | File                                                                                                    | Summary                                                                                                                                                                                    |
 | ---                                                                                                     | ---                                                                                                                                                                                        |
-| [www.conf](https://github.com/mourdani/inception/blob/master/srcs/requirements/wordpress/conf/www.conf) | Summary:** Code snippet in `www.conf` initializes a new pool in WordPress environment. Critical role in managing PHP processes for improved performance in parent repository architecture. |
+| [www.conf](https://github.com/mourdani/inception/blob/master/srcs/requirements/wordpress/conf/www.conf) | Code snippet in `www.conf` initializes a new pool in WordPress environment. Critical role in managing PHP processes for improved performance in parent repository architecture. |
 
 </details>
 
@@ -118,7 +118,6 @@ The inception project orchestrates Docker containers for Nginx, MariaDB, and Wor
 | File                                                                                               | Summary                                                                                                                                                                                                         |
 | ---                                                                                                | ---                                                                                                                                                                                                             |
 | [.env.nginx](https://github.com/mourdani/inception/blob/master/srcs/requirements/nginx/.env.nginx) | Code in srcs/requirements/nginx/.env.nginx manages environment variables for the Nginx container in the repository. It configures settings and behavior specific to Nginx's deployment within the architecture. |
-| [Dockerfile](https://github.com/mourdani/inception/blob/master/srcs/requirements/nginx/Dockerfile) | Error generating text for prompt `srcs/requirements/nginx/Dockerfile`:                                                                                                                                          |
 
 </details>
 
@@ -126,7 +125,7 @@ The inception project orchestrates Docker containers for Nginx, MariaDB, and Wor
 
 | File                                                                                                    | Summary                                                                                                                                                                                                                              |
 | ---                                                                                                     | ---                                                                                                                                                                                                                                  |
-| [nginx.conf](https://github.com/mourdani/inception/blob/master/srcs/requirements/nginx/conf/nginx.conf) | Tech Lead Summary: `Code in srcs/requirements/nginx/Dockerfile sets up Nginx configuration for the Docker container in the project architecture, delivering web server functionalities. Key for serving static and dynamic content.` |
+| [nginx.conf](https://github.com/mourdani/inception/blob/master/srcs/requirements/nginx/conf/nginx.conf) | `Code in srcs/requirements/nginx/Dockerfile sets up Nginx configuration for the Docker container in the project architecture, delivering web server functionalities. Key for serving static and dynamic content.` |
 
 </details>
 
